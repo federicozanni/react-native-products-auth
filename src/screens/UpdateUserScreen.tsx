@@ -1,5 +1,5 @@
 import React from 'react'
-import { Text, View, ScrollView, TextInput, Image, ActivityIndicator, TouchableWithoutFeedback, Keyboard } from 'react-native';
+import { View, ScrollView, Image, ActivityIndicator, TouchableWithoutFeedback, Keyboard } from 'react-native';
 import { productTheme } from '../themes/ProductTheme';
 import { ButtonSave } from '../components/ButtonsAction';
 import { EditUser } from '../helpers/EditUser';
@@ -38,15 +38,15 @@ export const UpdateUserScreen = ( { navigation, route }: UpdateUser ) => {
             
           : <>
           <TextInputs
-          onChange={onChange}
-          nombre={nombre}
-          showNameInput
-          showEmailInput={false}
-          onlyInput
-          password={password}
-          colors="black"
-          buttonColor="black"
-        />
+            onChange={onChange}
+            nombre={nombre}
+            showNameInput
+            showEmailInput={false}
+            onlyInput
+            password={password}
+            colors="black"
+            buttonColor="black"
+          />
 
           <View style={ settingTheme.buttonsContainer }>
 

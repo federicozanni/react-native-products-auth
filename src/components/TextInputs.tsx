@@ -6,6 +6,7 @@ import Icon from 'react-native-vector-icons/Ionicons';
 import { inputsTheme } from '../themes/InputsTheme';
 import { TextInputsInt } from '../interfaces/TextInoutsInterface';
 
+
 export const TextInputs = ( {
   onSubmit,
   onChange,
@@ -44,22 +45,22 @@ export const TextInputs = ( {
     <View style={ inputsTheme.textInputContainer } >
     { (showNameInput)
       &&
-        <View style={inputsTheme.textInputSection}>
-        <Icon style={{...inputsTheme.inputIcon, color: colors, borderColor:colors}} name="person-outline" size={20} color="#000"/>
-          <TextInput
-              style={{...inputsTheme.input, color:colors, borderColor: colors}}
-              placeholder= "Name"
-              keyboardType="default"
-              placeholderTextColor="#001d3d"
-              autoCapitalize="none"
-              autoCorrect={ false }
-              value={ nombre }
-              onChangeText={ (value) => onChange(value, 'nombre') }
-              onSubmitEditing={ onSubmit }
-              underlineColorAndroid="transparent"
-          />
-        </View>
-      }
+      <View style={inputsTheme.textInputSection}>
+      <Icon style={{...inputsTheme.inputIcon, color: colors, borderColor:colors}} name="person-outline" size={20} color="#000"/>
+        <TextInput
+            style={{...inputsTheme.input, color:colors, borderColor: colors}}
+            placeholder= "Name"
+            keyboardType="default"
+            placeholderTextColor="#001d3d"
+            autoCapitalize="none"
+            autoCorrect={ false }
+            value={ nombre }
+            onChangeText={ (value) => onChange(value, 'nombre') }
+            onSubmitEditing={ onSubmit }
+            underlineColorAndroid="transparent"
+        />
+      </View>
+    }
 
     { (showEmailInput)
       &&
@@ -80,29 +81,29 @@ export const TextInputs = ( {
       </View>
     }
 
-        <View style={inputsTheme.textInputSection}>
-            <Icon style={{...inputsTheme.inputIcon, color: colors, borderColor:colors}} name="lock-closed-outline" size={20} color="#000"/>
-            <TextInput
-                style={{...inputsTheme.input, color:colors, borderColor: colors}}
-                placeholder="Password"
-                placeholderTextColor="#001d3d"
-                autoCapitalize="none"
-                secureTextEntry={hidePass ? true : false}
-                value={ password }
-                maxLength={200}
-                onChangeText={ (value) => onChange(value, 'password') }
-                onSubmitEditing={ onSubmit }
-                underlineColorAndroid="transparent"
+      <View style={inputsTheme.textInputSection}>
+          <Icon style={{...inputsTheme.inputIcon, color: colors, borderColor:colors}} name="lock-closed-outline" size={20} color="#000"/>
+          <TextInput
+              style={{...inputsTheme.input, color:colors, borderColor: colors}}
+              placeholder="Password"
+              placeholderTextColor="#001d3d"
+              autoCapitalize="none"
+              secureTextEntry={hidePass ? true : false}
+              value={ password }
+              maxLength={200}
+              onChangeText={ (value) => onChange(value, 'password') }
+              onSubmitEditing={ onSubmit }
+              underlineColorAndroid="transparent"
+          />
+          <Icon
+              style={{...inputsTheme.IconHidePassword, color:colors, borderColor: colors}}
+              name={ hidePass ? 'eye-off' : 'eye' }
+              size={20}
+              color="grey"
+              onPress={ () => setHidePass(!hidePass) }
             />
-            <Icon
-                style={{...inputsTheme.IconHidePassword, color:colors, borderColor: colors}}
-                name={ hidePass ? 'eye-off' : 'eye' }
-                size={20}
-                color="grey"
-                onPress={ () => setHidePass(!hidePass) }
-              />
-          </View>
         </View>
+      </View>
 
       { (!onlyInput) &&
         <> 
