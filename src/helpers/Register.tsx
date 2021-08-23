@@ -9,21 +9,21 @@ export const Register = () => {
   const { singUp } = useContext(AuthContext);
 
 
-  const { name, email, password, onChange } = useForm({
-    name: '',
+  const { nombre, email, password, onChange } = useForm({
+    nombre: '',
     email: '',
     password: '',
 });
 
   const onRegister = () => {
-    singUp({ correo: email, nombre: name, password })
+    singUp({ correo: email, nombre, password })
     Keyboard.dismiss();
   }
 
   return {
       onRegister,
       onChange,
-      name,
+      nombre,
       email,
       password,
     }

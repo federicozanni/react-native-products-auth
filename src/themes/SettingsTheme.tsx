@@ -29,7 +29,6 @@ export const settingTheme = StyleSheet.create({
   buttonsContainer: {
     flexDirection: 'column', 
     justifyContent:'center', 
-    marginTop: 30, 
     marginHorizontal: 25,
   },
 

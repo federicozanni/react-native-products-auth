@@ -6,6 +6,7 @@ import { EditUser } from '../helpers/EditUser';
 import { UpdateUser } from '../interfaces/NavigationInterface';
 import { settingTheme } from '../themes/SettingsTheme';
 import { ModalTakePhoto } from '../components/ModalTakePhoto';
+import { TextInputs } from '../components/TextInputs';
 
 export const UpdateUserScreen = ( { navigation, route }: UpdateUser ) => {
 
@@ -36,28 +37,18 @@ export const UpdateUserScreen = ( { navigation, route }: UpdateUser ) => {
             />)
             
           : <>
-          <Text style={ productTheme.label }>User name:</Text>
-          <TextInput 
-              placeholder="Name"
-              placeholderTextColor="grey"
-              style={ productTheme.textInput }
-              value={ nombre }
-              onChangeText={ ( value )=> onChange( value, 'nombre' )  }
-          />
-
-          <Text style={ productTheme.label }>Password:</Text>
-          <TextInput 
-              placeholder="Password"
-              placeholderTextColor="grey"
-              style={ productTheme.textInput }
-              value={ password }
-              onChangeText={ ( value )=> onChange( value, 'password' )  }
-          />
+          <TextInputs
+          onChange={onChange}
+          nombre={nombre}
+          showNameInput
+          showEmailInput={false}
+          onlyInput
+          password={password}
+          colors="black"
+          buttonColor="black"
+        />
 
           <View style={ settingTheme.buttonsContainer }>
-          
-
-          <View style={{ height: 10 }} />
 
             <ButtonSave 
                 saveOrUpdate={UpdateUser}

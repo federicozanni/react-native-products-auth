@@ -1,6 +1,6 @@
 import { StyleSheet } from "react-native";
 
-export const registerTheme = StyleSheet.create({
+export const inputsTheme = StyleSheet.create({
 
   container: {
     flex: 1,
@@ -13,7 +13,6 @@ export const registerTheme = StyleSheet.create({
   textTitle: {
     fontSize: 20,
     fontWeight: '700',
-    color: 'white',
     textAlign:'center',
   },
 
@@ -28,7 +27,6 @@ export const registerTheme = StyleSheet.create({
     justifyContent: 'center',
     alignItems: 'center',
     fontWeight: '700',
-    color: 'white',
     marginBottom: 16,
     width: 300,
     paddingVertical: 6,
@@ -36,29 +34,23 @@ export const registerTheme = StyleSheet.create({
 
   inputIcon: {
     paddingVertical: 10,
-    borderColor: 'white',
     height: 40,
-    color: 'white',
     borderBottomWidth: 0.8,
   },
   
   input: {
     flex:1,
-    color: 'white',
     borderBottomWidth: 0.8,
     fontSize: 16,
     height: 40,
     width: 300,
     paddingHorizontal: 10,
-    borderColor: 'white'
   },
 
   IconHidePassword: {
     paddingRight: 15,
     paddingVertical: 10,
-    borderColor: 'white',
     height: 40,
-    color: 'white',
     borderBottomWidth: 0.8,
   },
 
@@ -69,7 +61,6 @@ export const registerTheme = StyleSheet.create({
 
   buttonLogin: {
     borderWidth: 2,
-    borderColor: 'white',
     paddingHorizontal: 20,
     paddingVertical: 5,
     borderRadius: 100,
@@ -90,7 +81,6 @@ export const registerTheme = StyleSheet.create({
 
   textButtonLogin: {
     fontSize: 17,
-    color: 'white',
     fontWeight: 'bold',
   },
 

@@ -1,0 +1,18 @@
+export interface TextInputsInt {
+  onSubmit?: any,
+  navigations?: any,
+  onChange?: any,
+  nombre?: any,
+  email?: any,
+  password?: any,
+  title?: string,
+  buttonTitle?: string,
+  message?: string,
+  colors?: string,
+  buttonColor?: string,
+  messageColor?: string,
+  buttonNext?: string,
+  showNameInput?: boolean,
+  showEmailInput?: boolean,
+  onlyInput?: boolean,
+}
